@@ -1,3 +1,4 @@
+// Récupération du modèle créé grâce à la fonction schéma de mongoose
 const Sauce = require('../models/Sauce');
 const fs = require('fs');
 
@@ -70,7 +71,7 @@ exports.deleteSauce = (req, res, next) => {
 };
 
 // Permet de récuperer toutes les sauces de la base MongoDB
-exports.getAllSauces = (req, res, next) => {
+exports.getAllStuff = (req, res, next) => {
     Sauce.find().then(
         (sauces) => {
             res.status(200).json(sauces);
